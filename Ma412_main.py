@@ -27,9 +27,9 @@ import Ma412_class as c
 # %% Loading the data
 
 # If the loading doesn't work, add the parameter engine = "pyarrow" in the pd.read_paraquet function
-df = pd.read_parquet("Data/train-00000-of-00001-b21313e511aa601a.parquet")
+df = pd.read_parquet("train-00000-of-00001-b21313e511aa601a.parquet")
 df = df.dropna(subset=["title", "abstract"]).reset_index(drop=True) # Removing the raws where there is no abstract or no title
-dv = pd.read_parquet("Data/val-00000-of-00001-66ce8665444026dc.parquet")
+dv = pd.read_parquet("val-00000-of-00001-66ce8665444026dc.parquet")
 dv = dv.dropna(subset=["title", "abstract"]).reset_index(drop=True) # Removing the raws where there is no abstract or no title
 
 # %% Preprocessing of the data 
